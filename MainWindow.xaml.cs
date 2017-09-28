@@ -23,6 +23,7 @@ namespace Lab
         public MainWindow()
         {
             InitializeComponent();
+            //hhjfjhfhghgfghfghfh
         }
     }
 }
