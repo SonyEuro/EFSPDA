@@ -6,84 +6,11 @@
         xmlns:local="clr-namespace:Lab"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Lab.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="371.234" Width="514.017">
+        Title="MainWindow" Height="373.234" Width="514.017">
     <Grid>
-        <ListView HorizontalAlignment="Left" Height="204" Margin="428,128,0,0" VerticalAlignment="Top" Width="62" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="57" Header="Магазин"/>
-                </GridView>
-            </ListView.View>
-            <Label Content="1"/>
-            <Label Content="2"/>
-        </ListView>
-        <ListView HorizontalAlignment="Left" Height="480" Margin="230,-177,0,0" VerticalAlignment="Top" Width="42" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.5,0.5">
-            <ListView.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </ListView.RenderTransform>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="57">
-                        <GridViewColumn.Header>
-                            <Label Content="Лента" RenderTransformOrigin="0.5,0.5">
-                                <Label.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="90"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Label.RenderTransform>
-
-                            </Label>
-                        </GridViewColumn.Header>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-            <ListViewItem Content="0" RenderTransformOrigin="0.5,0.5" Height="45">
-                <ListViewItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ListViewItem.RenderTransform>
-            </ListViewItem>
-            <ListViewItem Background="#FFDC8181" Content="1" RenderTransformOrigin="0.5,0.5" Height="45">
-                <ListViewItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ListViewItem.RenderTransform>
-            </ListViewItem>
-            <ListViewItem Content="0" RenderTransformOrigin="0.5,0.5" Height="45">
-                <ListViewItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ListViewItem.RenderTransform>
-            </ListViewItem>
-        </ListView>
         <Label Content="Входная строка" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="0101001010100" VerticalAlignment="Top" Width="380"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="0101001010100" VerticalAlignment="Top" Width="346" KeyDown="TextBox_KeyDown" />
         <TabControl HorizontalAlignment="Left" Height="204" Margin="10,127,0,0" VerticalAlignment="Top" Width="413">
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="400" Height="172"/>
-                </Grid>
-            </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="400" Height="172"/>
@@ -99,6 +26,9 @@
         <Button Content="Назад" HorizontalAlignment="Left" Margin="90,92,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Вперёд" HorizontalAlignment="Left" Margin="170,92,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Дискретно" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid x:Name="Tape" HorizontalAlignment="Left" Height="20" Margin="10,41,0,0" VerticalAlignment="Top" Width="480" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="None" HorizontalScrollBarVisibility="Hidden" MinColumnWidth="14" MaxColumnWidth="14"/>
+        <DataGrid x:Name="Stack" HorizontalAlignment="Left" Height="181" Margin="428,150,0,0" VerticalAlignment="Top" Width="68"/>
+        <Button Content="-&gt;" HorizontalAlignment="Left" Margin="461,10,0,0" VerticalAlignment="Top" Width="29" Click="Button_Click"/>
 
     </Grid>
 </Window>
