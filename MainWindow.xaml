@@ -4,12 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Lab.MainWindow"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" x:Class="Lab.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="373.234" Width="514.017">
+        Title="MainWindow" Height="373.234" Width="468.684">
     <Grid>
-        <Label Content="Входная строка" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="0101001010100" VerticalAlignment="Top" Width="346" KeyDown="TextBox_KeyDown" />
+        <Label Content="Входная строка" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="0101001010100" VerticalAlignment="Top" Width="304" KeyDown="TextBox_KeyDown" />
         <TabControl HorizontalAlignment="Left" Height="204" Margin="10,127,0,0" VerticalAlignment="Top" Width="413">
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
@@ -22,13 +22,14 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Непрерывно" HorizontalAlignment="Left" Margin="407,92,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button Content="Непрерывно" HorizontalAlignment="Left" Margin="365,92,0,0" VerticalAlignment="Top" Width="83"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="90,92,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Вперёд" HorizontalAlignment="Left" Margin="170,92,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Дискретно" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid x:Name="Tape" HorizontalAlignment="Left" Height="20" Margin="10,41,0,0" VerticalAlignment="Top" Width="480" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="None" HorizontalScrollBarVisibility="Hidden" MinColumnWidth="14" MaxColumnWidth="14"/>
-        <DataGrid x:Name="Stack" HorizontalAlignment="Left" Height="181" Margin="428,150,0,0" VerticalAlignment="Top" Width="68"/>
-        <Button Content="-&gt;" HorizontalAlignment="Left" Margin="461,10,0,0" VerticalAlignment="Top" Width="29" Click="Button_Click"/>
+        <DataGrid x:Name="Tape" HorizontalAlignment="Left" Height="20" Margin="10,41,0,0" VerticalAlignment="Top" Width="438" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="None" HorizontalScrollBarVisibility="Hidden" MinColumnWidth="14" MaxColumnWidth="14" SelectionMode="Single" SelectionUnit="Cell"/>
+        <Button Content="-&gt;" HorizontalAlignment="Left" Margin="419,10,0,0" VerticalAlignment="Top" Width="29" Click="Button_Click"/>
+        <DataGrid x:Name="Stack" HorizontalAlignment="Left" Height="182" Margin="428,149,0,0" VerticalAlignment="Top" Width="20" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" HeadersVisibility="None" MinColumnWidth="14"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="428,125,0,0" VerticalAlignment="Top" Width="20" Source="mag.png"/>
 
     </Grid>
 </Window>

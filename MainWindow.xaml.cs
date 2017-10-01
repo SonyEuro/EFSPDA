@@ -62,7 +62,34 @@ namespace Lab
                 str.Add(InputText.Text[i].ToString());
             }
             dt.Rows[0].ItemArray = str.ToArray();
-            Tape.ItemsSource = dt.DefaultView;     
+            Tape.ItemsSource = dt.DefaultView;
+            //Tape.Columns.Add((DataGridColumn)(new DataGridTextColumn()));
+            //((DataGridColumn)Tape.Columns[0]).Background = new SolidColorBrush(Colors.Red);
+            //Tape.SelectedItem = 0;
+            //Tape.SelectedIndex = 3;
+            
+
+
+            DataTable dt2 = new DataTable();
+            Stack.Columns.Clear();
+            List<String> str2 = new List<string>();
+            //dt2.Rows.Add();
+            dt2.Columns.Add();
+
+            for (int i = 0; i < InputText.Text.Length; i++)
+            {
+                //dt2.Rows.Add();
+                str2.Add(InputText.Text[i].ToString());
+                //dt2.Columns.Add(new DataColumn());
+                dt2.Rows.Add(new String[]{ str2[i].ToString() });
+                //dt2.Rows[i].ItemArray[0] = ;
+            }
+            //dt2.Rows[0].ItemArray[0] = str2[0];
+            //dt2.Rows[0].ItemArray = str2[0].ToArray();
+            Stack.ItemsSource = dt2.DefaultView;
+            Stack.MinColumnWidth = 68;
+            Stack.MaxColumnWidth = 68;
+            Stack.ColumnWidth = 68;
         }
     }
 }
