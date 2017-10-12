@@ -5,31 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab"
         xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Custom="http://schemas.microsoft.com/wpf/2008/toolkit" x:Class="Lab.MainWindow"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="373.234" Width="468.684">
-    <Grid>
-        <Label Content="Входная строка" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" Text="0101001010100" VerticalAlignment="Top" Width="304" KeyDown="TextBox_KeyDown" />
-        <TabControl HorizontalAlignment="Left" Height="204" Margin="10,127,0,0" VerticalAlignment="Top" Width="413">
-            <TabItem Header="TabItem">
+        mc:Ignorable="d" Height="553.234" Width="445.684" WindowStartupLocation="CenterScreen" Title="ЭКАМП">
+    <Grid Name="gd">
+        <Label Content="Входная строка:" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="23" Margin="110,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="313" KeyDown="TextBox_KeyDown" KeyUp="InputText_KeyUp" PreviewKeyDown="InputText_PreviewKeyDown" />
+        <TabControl HorizontalAlignment="Left" Margin="10,85,0,10" Width="413">
+            <TabItem Header="Таблица функций переходов">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="400" Height="172"/>
+                    <DataGrid x:Name="JumpFunctionTb" IsReadOnly="True" HorizontalAlignment="Left" Margin="0" Width="403"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
+            <TabItem Header="Таблица переходов">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="400" Height="172"/>
+                    <DataGrid x:Name="JumpTb" IsReadOnly="True" HorizontalAlignment="Left" Margin="0" Width="403"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="Непрерывно" HorizontalAlignment="Left" Margin="365,92,0,0" VerticalAlignment="Top" Width="83"/>
-        <Button Content="Назад" HorizontalAlignment="Left" Margin="90,92,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Вперёд" HorizontalAlignment="Left" Margin="170,92,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Дискретно" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="75"/>
-        <DataGrid x:Name="Tape" HorizontalAlignment="Left" Height="20" Margin="10,41,0,0" VerticalAlignment="Top" Width="438" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="None" HorizontalScrollBarVisibility="Hidden" MinColumnWidth="14" MaxColumnWidth="14" SelectionMode="Single" SelectionUnit="Cell"/>
-        <Button Content="-&gt;" HorizontalAlignment="Left" Margin="419,10,0,0" VerticalAlignment="Top" Width="29" Click="Button_Click"/>
-        <DataGrid x:Name="Stack" HorizontalAlignment="Left" Height="182" Margin="428,149,0,0" VerticalAlignment="Top" Width="20" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" HeadersVisibility="None" MinColumnWidth="14"/>
-        <Image HorizontalAlignment="Left" Height="25" Margin="428,125,0,0" VerticalAlignment="Top" Width="20" Source="mag.png"/>
+        <Button x:Name="PermanentBtn" Content="Непрерывно" HorizontalAlignment="Left" Margin="340,50,0,0" VerticalAlignment="Top" Width="83" Click="Button_Click_1"/>
+        <Button x:Name="DiscreteBtn" Content="Дискретно" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
