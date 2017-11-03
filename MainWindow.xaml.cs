@@ -147,7 +147,7 @@ namespace Lab
 
         private void Success(AutomatMP at)
         {
-            if (at.confirmation)
+            if (at.getConfirmation())
             {
                 InputText.Background = Brushes.LightGreen;
             }
